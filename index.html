@@ -1,69 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barra de Navegación</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="barra-superior">
-        <i class="fas fa-bars menu"></i>
-      <a href="home.html">
-           <i class="fas fa-home img"></i>
-      </a>   
+        <a href="home.html">
+            <i class="fas fa-home img"></i>
+        </a>
         <div class="barra-de-busqueda">
-            <input type="text" id="search-bar" placeholder="Buscar videos..." oninput="filterVideos()">
-             <div id="video-list"></div>
-            <button class="btn-de-busqueda">
-                <i class="fas fa-search"></i>
-            </button>
+            <form id="searchForm">
+                <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="filterProducts()">
+                <button type="submit" class="btn-de-busqueda">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
         </div>
-            <a href="perfil.html">
-                <i class="fas fa-user usuario"></i>
-            </a>
+        <a href="perfil.html"> <i class="fas fa-user usuario"></i> </a>
     </div>
-       
+ 
+    <div class="container" id="productContainer">
+        <div class="product" data-name="Base clara">
+            <img src="Base clara.jpeg" alt="Base clara" width="30%%">
+            <p>Base clara</p>
+        </div>
+        <div class="product" data-name="Base">
+            <img src="Base.jpeg" alt="Base" width="30%">
+            <p>Base oscura</p>
+        </div>
+        <div class="product" data-name="Blush en barra">
+            <img src="Blush en barra.jpeg" alt="Blush en barra" width="30%">
+            <p>Blush en barra</p>
+        </div>
+        <div class="product" data-name="Blush liquido">
+            <img src="Blush liquido.jpeg" alt="Blush liquido" width="30%">
+            <p>Blush liquido</p>
+        </div>
+        <div class="product" data-name="Brocha para rubor">
+            <img src="Brocha para rubor.jpeg" alt="Brocha para rubor" width="30%">
+            <p>Brocha para rubor</p>
+        </div>
+        <div class="product" data-name="Brochas para sombras">
+            <img src="Brochas para sombras.jpeg" alt="Brochas para sombras" width="30%">
+            <p>Brochas para sombras</p>
+        </div>
+        <div class="product" data-name="Brochas">
+            <img src="Brochas.jpeg" alt="Brochas" width="30%">
+            <p>Brochas</p>
+        </div>
+        <div class="product" data-name="Corrector">
+            <img src="Corrector.jpeg" alt="Corrector" width="30%">
+            <p>Corrector</p>
+        </div>
+        <div class="product" data-name="Delineador para los ojos">
+            <img src="Delineador de ojos.jpeg" alt="Delineador de ojos" width="30%">
+            <p>Delineador de ojos</p>
+        </div>
+        <div class="product" data-name="Gloss rosa">
+            <img src="Gloss rosa.jpeg" alt="Gloss rosa" width="30%">
+            <p>Gloss rosa</p>
+        </div>
+        <div class="product" data-name="Iluminador rosa">
+            <img src="Iluminador rosa.jpeg" alt="Iluminador rosa" width="30%">
+            <p>Iluminador rosa</p>
+        </div>
+        <div class="product" data-name="Iluminador">
+            <img src="Iluminador.jpeg" alt="Iluminador" width="30%">
+            <p>Iluminador</p>
+        </div>
+        <div class="product" data-name="Labial de Maybelline">
+            <img src="Labial de Maybelline.jpeg" alt="Labial de Maybelline" width="30%">
+            <p>Labial de Maybelline</p>
+        </div>
+        <div class="product" data-name="Paleta de maquillaje">
+            <img src="Paleta de maquillaje.jpeg" alt="Paleta de maquillaje" width="30%">
+            <p>Paleta de maquillaje</p>
+        </div>
+        <div class="product" data-name="Paleta de maquillaje oscura">
+            <img src="Paleta de maquillaje oscura.jpeg" alt="Paleta de maquillaje oscura" width="30%">
+            <p>Paleta de maquillaje oscura</p>
+        </div>
+        <div class="product" data-name="Pestañol">
+            <img src="Pestañol.jpeg" alt="Pestañol" width="30%">
+            <p>Pestañol</p>
+        </div>
+        <div class="product" data-name="Polvo traslucido">
+            <img src="Polvo traslucido.jpeg" alt="Polvo traslucido" width="30%">
+            <p>Polvo traslucido</p>
+        </div>
+        <div class="product" data-name="Gloss oscuro">
+            <img src="Gloss oscuro.jpeg" alt="Gloss oscuro" width="30%">
+            <p>Gloss oscuro</p>
+        </div>
+        <div class="product" data-name="Pomada para cejas">
+            <img src="Pomada para cejas.jpeg" alt="Pomada para cejas" width="30%">
+            <p>Pomada para cejas</p>
+        </div>
+        <div class="product" data-name="Sombra para cejas">
+            <img src="Sombra para cejas.jpeg" alt="Sombra para cejas" width="30%">
+            <p>Sombra para cejas</p>
+        </div>
+        <div class="product" data-name="paleta de sombras de ojos">
+            <img src="paleta de sombras de ojos.jpeg" alt=" paleta de sombras de ojos" width="30%">
+            <p>Sombras de ojos</p>
+        </div>
+        <div class="product" data-name="Tinta para labios">
+            <img src="Tinta para labios.jpeg" alt="Tinta para labios" width="30%">
+            <p>Tinta para labios</p>
+        </div>
+    </div>
+
     <div class="text-container">
-        
-            <h1>Lo mejor del momento</h1>
-        
-    </div class="container">
-    <div>
-        <div>
-            <img src="Multimedia (9).jpeg" alt="" width="18%">
-            <img src="Multimedia (10).jpeg" alt="" width="18%">
-            <img src="Multimedia (11).jpeg" alt="" width="18%">
-            <img src="Multimedia (12).jpeg" alt="" width="18%">
-            <img src="Multimedia (13).jpeg" alt="" width="18%">
-            <img src="Multimedia (14).jpeg" alt="" width="18%">
-            <img src="Multimedia (15).jpeg" alt="" width="18%">
-            <img src="Multimedia (16).jpeg" alt="" width="18%">
-            <img src="Multimedia (17).jpeg" alt="" width="18%">
-            <img src="Multimedia (18).jpeg" alt="" width="18%">
-            <img src="maquillaje.jpeg" alt="" width="18%">
-            <img src="maquillaje2.jpeg" alt="" width="18%">
-            <img src="maquillaje3.jpeg" alt="" width="18%">
-            <img src="maquillaje4.jpeg" alt="" width="18%">
-            <img src="maquillaje5.jpeg" alt="" width="18%">
-            <img src="maquillaje6.jpeg" alt="" width="18%">
-            <img src="maquillaje7.jpeg" alt="" width="18%">
-            <img src="maquillaje8.jpeg" alt="" width="18%"> 
-            <img src="maqullaje9.jpeg" alt="" width="18%">
-            <img src="maquillaje10.jpeg" alt="" width="18%">
-            <img src="maquillaje11.jpeg" alt="" width="18%">
-            <img src="maquillaje 12.jpeg" alt="" width="18%">
-            <img src="maquillaje13.jpeg" alt="" width="18%">
-            <img src="maquillaje14.jpeg" alt="" width="18%">
-            <img src="maquillaje16.jpeg" alt="" width="18%" >
-            <img src="maquillaje15" alt="" width="18%">
-            
+        <h1>Tendencias en maquillaje</h1>
+    </div>
+ 
+    <div class="image-container">
+        <div class="imagen" data-name="Maquillaje con perlas">
+            <p>Maquillaje con perlas </p>
+            <img src="https://tse1.mm.bing.net/th?id=OIP.IXw0j43HrfF7sbkGkdXM8AHaJO&pid=Api&P=0&h=220" alt="">
+        </div>
+        <div class="imagen" data-name="Maquillaje natural">
+            <p>Maquillaje natural</p>
+            <img src="https://i.pinimg.com/originals/93/07/32/930732533cd8c7cfd581f7e11e3cc283.jpg" alt="">
+        </div>
+        <div class="imagen" data-name="Gloss">
+            <p>Gloss</p>
+            <img src="https://i5.walmartimages.com/asr/b9c17718-6cad-41f9-bf2d-3148075f0041.7d2f44054f4af742250638ed6663fcec.jpeg" alt="">
+        </div>
+        <div class="imagen" data-name="Labial mate">
+            <p>Labial mate</p>
+            <img src="https://static-blogs.mujerhoy.com/recetas-de-belleza/wp-content/uploads/sites/33/2018/03/shutterstock_349372454-1024x889.jpg" alt="">
+        </div>
+        <div class="imagen" data-name="Maquillaje de noche">
+            <p>Maquillaje de noche</p>
+            <img src="https://centralmakeup.mx/wp-content/uploads/2020/04/maquillaje-de-noche-imagenes.jpg" alt="">
+        </div>
+        <div class="imagen" data-name=" Delineado gráfico">
+            <p>Delineado gráfico</p>
+            <img src="https://www.okchicas.com/wp-content/uploads/2020/06/Delineado-grafico-3.jpg" alt="" width="20%">
         </div>
     </div>
-    
-
+ 
+    <div class="container" id="productContainer"></div>
+ 
+    <section>
+        <footer style="background-color: #7B7CA8; color: #000000; text-align: center; padding: 20px 0;">
+            <div class="footer-content" style="max-width: 1200px; margin: auto; padding: 0 20px;">
+             
+                <div class="contact-us">
+                    <p>Email: Makeup_sh.mp.12@gmail.com</p>
+                    <p style="margin: top 10px;">Teléfono: +503 7842-8934</p>
+                </div>
+              <div style="margin-bottom: 15px;">
+                 <h3>Síguenos</h3>
+                 <div class="flex-justify-between">
+                     <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt=""></a>
+                     <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt=""></a>
+                     <a href="https://x.com/" target="_blank"><img src="twitter.png" alt=""></a>
+                 </div>
+              </div>
+         
+            </div>
+           
+          </footer>
+    </section>
+ 
+ 
+ 
     <script src="script.js"></script>
-
+ 
 </body>
 </html>
